@@ -4,21 +4,21 @@
   "version": "${version}",
   "name": "${name}",
   "description": "This is an example starter template.",
-  "authors": [ "Moonflower" ],
-  "contributors": [ "An author", "Another author", "The last author" ],
+  "authors": [ "CookieJar Modding" ],
+  "contributors": [ "JustinPlayzz" ],
   "contact": {
-    "homepage": "https://www.moonflower.gg",
-	"issues": "https://github.com/MoonflowerTeam/${repo}/issues",
-    "sources": "https://github.com/MoonflowerTeam/${repo}/"
+    "homepage": "",
+	"issues": "https://github.com/CookieJarModding/Assembly/issues",
+    "sources": "https://github.com/CookieJarModding/Assembly"
   },
   "license": "GPLv3",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "gg.moonflower.starter.core.fabric.StarterFabric"
+      "com.cookiejar.assembly.core.fabric.AssemblyFabric"
     ],
     "fabric-datagen": [
-      "gg.moonflower.starter.core.fabric.StarterFabricDatagen"
+      "com.cookiejar.assembly.core.fabric.AssemblyFabricDatagen"
     ]
   },
   "depends": {

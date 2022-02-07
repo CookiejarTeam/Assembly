@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[39,)"
-issueTrackerURL = "https://github.com/MoonflowerTeam/${repo}/issues"
+issueTrackerURL = "https://github.com/CookieJarModding/Assembly/issues"
 license = "GPLv3"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
 displayName = "${name}"
-authors = "Moonflower"
-credits = "An author, another author, and the last author."
-description = "This is an example starter template."
-displayURL = "https://www.moonflower.gg"
+authors = "CookieJar Modding"
+credits = "JustinPlayzz, Uraneptus"
+description = "Expands on 1.18.1 Blocks!"
+#displayURL = "https://www.moonflower.gg"
 #updateJSONURL = ""
 #logoFile = ""
 
