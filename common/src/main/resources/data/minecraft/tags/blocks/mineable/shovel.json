@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "assembly:dirt_bricks",
+    "assembly:dirt_brick_slab",
+    "assembly:dirt_brick_stairs",
+    "assembly:dirt_brick_wall",
+    "assembly:mossy_dirt_bricks",
+    "assembly:mossy_dirt_brick_slab",
+    "assembly:mossy_dirt_brick_stairs",
+    "assembly:mossy_dirt_brick_wall",
+    "assembly:dirt_tiles",
+    "assembly:chiseled_dirt",
+    "assembly:polished_dirt"
+  ]
+}

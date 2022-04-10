@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:amethyst_block"
+  },
+  "result": "assembly:dripping_amethyst",
+  "experience": 0.7,
+  "cookingtime": 200
+}

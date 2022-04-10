@@ -1,8 +1,11 @@
 package com.cookiejar.assembly.core;
 
+import com.cookiejar.assembly.core.data.gen.AssemblyLanguage;
 import com.cookiejar.assembly.core.registry.AssemblyBlocks;
 import com.cookiejar.assembly.core.registry.AssemblyItems;
 import gg.moonflower.pollen.api.platform.Platform;
+import gg.moonflower.pollen.api.util.PollinatedModContainer;
+import net.minecraft.data.DataGenerator;
 
 public class Assembly {
     public static final String MOD_ID = "assembly";
@@ -29,5 +32,8 @@ public class Assembly {
     }
 
     public static void onDataInit(Platform.DataSetupContext ctx) {
+        DataGenerator generator = ctx.getGenerator();
+        PollinatedModContainer container = ctx.getMod();
+        generator.addProvider(new AssemblyLanguage(generator, container));
     }
 }

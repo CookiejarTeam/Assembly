@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "assembly:crying_obsidian_tiles",
+    "assembly:chiseled_obsidian",
+    "assembly:obsidian_bricks",
+    "assembly:obsidian_pillar",
+    "assembly:obsidian_tiles",
+    "assembly:polished_obsidian",
+    "assembly:dripstone_bricks",
+    "assembly:chiseled_dripstone",
+    "assembly:amethyst_bricks",
+    "assembly:amethyst_brick_slab",
+    "assembly:amethyst_brick_stairs",
+    "assembly:dripping_amethyst",
+    "assembly:chiseled_amethyst",
+    "assembly:amethyst_pillar",
+    "assembly:dripstone_slab",
+    "assembly:dripstone_stairs",
+    "assembly:chiseled_basalt",
+    "assembly:wax_block",
+    "assembly:wax_bricks",
+    "assembly:polished_wax",
+    "assembly:carved_wax",
+    "assembly:basalt_tiles"
+  ]
+}

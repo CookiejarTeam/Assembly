@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "assembly:block/mossy_dirt_brick_slab_top"
+    },
+    "type=bottom": {
+      "model": "assembly:block/mossy_dirt_brick_slab"
+    },
+    "type=double": {
+      "model": "assembly:block/mossy_dirt_bricks"
+    }
+  }
+}

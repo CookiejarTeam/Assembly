@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "assembly:crying_obsidian_tiles",
+    "assembly:chiseled_obsidian",
+    "assembly:obsidian_bricks",
+    "assembly:obsidian_pillar",
+    "assembly:obsidian_tiles",
+    "assembly:polished_obsidian"
+  ]
+}
