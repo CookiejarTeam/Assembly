@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "assembly:block/amethyst_bricks"
+    "wall": "assembly:block/cracked_basalt_tiles"
   }
 }

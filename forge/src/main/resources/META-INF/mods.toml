@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[40,)"
+loaderVersion = "[39,)"
 issueTrackerURL = "https://github.com/CookieJarModding/Assembly/issues"
 license = "GPLv3"
 
@@ -8,8 +8,8 @@ modId = "${id}"
 version = "${version}"
 displayName = "${name}"
 authors = "CookieJar Modding"
-credits = "JustinPlayzz, Uraneptus, ebo2022"
-description = "Adds more building blocks to Minecraft."
+credits = "JustinPlayzz, Uraneptus"
+description = "Expands on 1.18.1 Blocks!"
 #displayURL = "https://www.moonflower.gg"
 #updateJSONURL = ""
 #logoFile = ""
@@ -17,20 +17,20 @@ description = "Adds more building blocks to Minecraft."
 [[dependencies.${id}]]
 modId = "forge"
 mandatory = true
-versionRange = "[40,)"
+versionRange = "[39,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${id}]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.2,)"
+versionRange = "[1.18,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${id}]]
 modId = "pollen"
 mandatory = true
-versionRange = "[1.4.5,)"
+versionRange = "[1.3.1,)"
 ordering = "BEFORE"
 side = "BOTH"

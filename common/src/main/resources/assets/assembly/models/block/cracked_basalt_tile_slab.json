@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "assembly:block/cracked_basalt_tiles",
+    "bottom": "assembly:block/cracked_basalt_tiles",
+    "top": "assembly:block/cracked_basalt_tiles"
+  }
+}
