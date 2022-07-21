@@ -3,12 +3,14 @@ package com.cookiejar.assembly.core.registry;
 import com.cookiejar.assembly.common.block.AssemblyStairBlock;
 import com.cookiejar.assembly.core.Assembly;
 import com.cookiejar.assembly.core.data.gen.AssemblyLanguage;
+import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -16,7 +18,7 @@ import java.util.function.Supplier;
 
 @SuppressWarnings({ "unused"})
 public class AssemblyBlocks {
-    public static final PollinatedRegistry<Block> BLOCKS = PollinatedRegistry.create(Registry.BLOCK, Assembly.MOD_ID);
+    public static final PollinatedBlockRegistry BLOCKS = PollinatedRegistry.createBlock(AssemblyItems.ITEMS);
 
     public static final Supplier<Block> DRIPSTONE_SLAB = register("dripstone_slab", () -> new SlabBlock(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DRIPSTONE_STAIRS = register("dripstone_stairs", () -> new AssemblyStairBlock(Blocks.DRIPSTONE_BLOCK.defaultBlockState(), Block.Properties.copy(Blocks.DRIPSTONE_BLOCK)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
@@ -112,9 +114,9 @@ public class AssemblyBlocks {
 
 
     public static class Properties {
-        public static final Block.Properties DIRT = Block.Properties.copy(Blocks.DIRT).strength(2.0F, 6.0F);
-        public static final Block.Properties DRIPSTONE = Block.Properties.copy(Blocks.DRIPSTONE_BLOCK).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops();
-        public static final Block.Properties AMETHYST = Block.Properties.of(Material.AMETHYST, MaterialColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties DIRT = BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2.0F, 6.0F);
+        public static final BlockBehaviour.Properties DRIPSTONE = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK);
+        public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
     }
 
     private static Supplier<Block> register(String id, Supplier<Block> block, Item.Properties properties) {

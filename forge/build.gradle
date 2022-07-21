@@ -8,15 +8,15 @@ plugins {
 archivesBaseName = "${rootProject.archivesBaseName}-${project.name}"
 
 loom {
-//    accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
+    accessWidenerPath.set(project(":common").file("src/main/resources/${project.mod_id}.accesswidener"))
 
     forge {
         // For some reason gradle doesn't like using rootProject here?
         mixinConfig "${project.mod_id}-common.mixins.json"
         mixinConfig "${project.mod_id}.mixins.json"
 
-//        convertAccessWideners.set(true)
-//        extraAccessWideners.add("${project.mod_id}.accesswidener")
+        convertAccessWideners.set(true)
+        extraAccessWideners.add("${project.mod_id}.accesswidener")
 
         dataGen {
             mod project.mod_id
@@ -52,7 +52,7 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
-    modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}") { transitive = false }
+    modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}")
 
     modRuntimeOnly "curse.maven:configured-457570:3559398"
     modRuntimeOnly "curse.maven:catalogue-459701:3559402"

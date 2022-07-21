@@ -8,7 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "starter"
+rootProject.name = "assembly"
 
 include("common")
 include("fabric")

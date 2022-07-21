@@ -10,8 +10,8 @@ import net.minecraft.data.DataGenerator;
 public class Assembly {
     public static final String MOD_ID = "assembly";
     public static final Platform PLATFORM = Platform.builder(MOD_ID)
-            .clientInit(Assembly::onClientInit)
-            .clientPostInit(Assembly::onClientPostInit)
+            .clientInit(() -> Assembly::onClientInit)
+            .clientPostInit(() -> Assembly::onClientPostInit)
             .commonInit(Assembly::onCommonInit)
             .commonPostInit(Assembly::onCommonPostInit)
             .dataInit(Assembly::onDataInit)
