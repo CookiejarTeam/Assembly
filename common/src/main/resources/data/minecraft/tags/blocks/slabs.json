@@ -2,6 +2,17 @@
 	"replace": false,
 	"values": [
 		"assembly:dirt_brick_slab",
-		"assembly:mossy_dirt_brick_slab"
+		"assembly:mossy_dirt_brick_slab",
+		"assembly:polished_dripstone_slab",
+		"assembly:dripstone_slab",
+		"assembly:dripstone_brick_slab",
+		"assembly:basalt_tile_slab",
+		"assembly:basalt_shingle_slab",
+		"assembly:cracked_basalt_tile_slab",
+		"assembly:tuff_brick_slab",
+		"assembly:cracked_tuff_brick_slab",
+		"assembly:calcite_brick_slab",
+		"assembly:cracked_calcite_brick_slab",
+		"assembly:amethyst_brick_slab"
 	]
 }

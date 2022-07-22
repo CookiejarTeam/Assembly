@@ -18,11 +18,11 @@ public class AssemblyBlocks {
     public static final PollinatedBlockRegistry BLOCKS = PollinatedRegistry.createBlock(AssemblyItems.ITEMS);
 
     // Dripstone
-    public static final Supplier<Block> DRIPSTONE_SLAB = BLOCKS.registerWithItem("dripstone_slab", () -> new SlabBlock(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> DRIPSTONE_STAIRS = BLOCKS.registerWithItem("dripstone_stairs", () -> new AssemblyStairBlock(Blocks.DRIPSTONE_BLOCK.defaultBlockState(), Block.Properties.copy(Blocks.DRIPSTONE_BLOCK)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> DRIPSTONE_SLAB = BLOCKS.registerWithItem("dripstone_slab", () -> new SlabBlock(Properties.DRIPSTONE), slab());
+    public static final Supplier<Block> DRIPSTONE_STAIRS = BLOCKS.registerWithItem("dripstone_stairs", () -> new AssemblyStairBlock(Blocks.DRIPSTONE_BLOCK.defaultBlockState(), Properties.DRIPSTONE), stairs());
     public static final Supplier<Block> POLISHED_DRIPSTONE = BLOCKS.registerWithItem("polished_dripstone", () -> new Block(Properties.DRIPSTONE), followItem(Items.DRIPSTONE_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-    public static final Supplier<Block> POLISHED_DRIPSTONE_SLAB = BLOCKS.registerWithItem("polished_dripstone_slab", () -> new SlabBlock(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> POLISHED_DRIPSTONE_STAIRS = BLOCKS.registerWithItem("polished_dripstone_stairs", () -> new AssemblyStairBlock(POLISHED_DRIPSTONE.get().defaultBlockState(), Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> POLISHED_DRIPSTONE_SLAB = BLOCKS.registerWithItem("polished_dripstone_slab", () -> new SlabBlock(Properties.DRIPSTONE), slab());
+    public static final Supplier<Block> POLISHED_DRIPSTONE_STAIRS = BLOCKS.registerWithItem("polished_dripstone_stairs", () -> new AssemblyStairBlock(POLISHED_DRIPSTONE.get().defaultBlockState(), Properties.DRIPSTONE), stairs());
     public static final Supplier<Block> CHISELED_DRIPSTONE = BLOCKS.registerWithItem("chiseled_dripstone", () -> new Block(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DRIPSTONE_BRICKS = BLOCKS.registerWithItem("dripstone_bricks", () -> new Block(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DRIPSTONE_BRICK_SLAB = BLOCKS.registerWithItem("dripstone_brick_slab", () -> new SlabBlock(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
@@ -33,10 +33,10 @@ public class AssemblyBlocks {
     public static final Supplier<Block> DRIPPING_AMETHYST = BLOCKS.registerWithItem("dripping_amethyst", () -> new AmethystBlock(Properties.AMETHYST), followItem(Items.BUDDING_AMETHYST, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerWithItem("chiseled_amethyst", () -> new AmethystBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> AMETHYST_PILLAR = BLOCKS.registerWithItem("amethyst_pillar", () -> new RotatedPillarBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> AMETHYST_BRICKS = BLOCKS.registerWithItem("amethyst_bricks", () -> new AmethystBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> AMETHYST_BRICK_SLAB = BLOCKS.registerWithItem("amethyst_brick_slab", () -> new SlabBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> AMETHYST_BRICK_STAIRS = BLOCKS.registerWithItem("amethyst_brick_stairs", () -> new AssemblyStairBlock(Blocks.AMETHYST_BLOCK.defaultBlockState(), Block.Properties.copy(AMETHYST_BRICKS.get())), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> AMETHYST_BRICK_WALL = BLOCKS.registerWithItem("amethyst_brick_wall", () -> new WallBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
+    public static final Supplier<Block> AMETHYST_BRICKS = BLOCKS.registerWithItem("amethyst_bricks", () -> new AmethystBlock(Properties.AMETHYST), amethyst());
+    public static final Supplier<Block> AMETHYST_BRICK_SLAB = BLOCKS.registerWithItem("amethyst_brick_slab", () -> new SlabBlock(Properties.AMETHYST), amethyst());
+    public static final Supplier<Block> AMETHYST_BRICK_STAIRS = BLOCKS.registerWithItem("amethyst_brick_stairs", () -> new AssemblyStairBlock(Blocks.AMETHYST_BLOCK.defaultBlockState(), Block.Properties.copy(AMETHYST_BRICKS.get())), amethyst());
+    public static final Supplier<Block> AMETHYST_BRICK_WALL = BLOCKS.registerWithItem("amethyst_brick_wall", () -> new WallBlock(Properties.AMETHYST), amethyst());
 
     // Obsidian
     public static final Supplier<Block> CRYING_OBSIDIAN_TILES = BLOCKS.registerWithItem("crying_obsidian_tiles", () -> new CryingObsidianBlock(Block.Properties.copy(Blocks.CRYING_OBSIDIAN).requiresCorrectToolForDrops()), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
@@ -105,12 +105,16 @@ public class AssemblyBlocks {
         return object -> new TabInsertBlockItem(insertAfter, object, properties);
     }
 
-    private static Function<Block, Item> stoneStairs() {
+    private static Function<Block, Item> stairs() {
         return followItem(Items.DIORITE_STAIRS, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     }
 
-    private static Function<Block, Item> stoneSlab() {
+    private static Function<Block, Item> slab() {
         return followItem(Items.DIORITE_SLAB, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    }
+
+    private static Function<Block, Item> amethyst() {
+        return followItem(Items.AMETHYST_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     }
 
     public static final class Properties {

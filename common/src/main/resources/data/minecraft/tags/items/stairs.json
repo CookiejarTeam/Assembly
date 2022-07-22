@@ -2,6 +2,17 @@
 	"replace": false,
 	"values": [
 		"assembly:dirt_brick_stairs",
-		"assembly:mossy_dirt_brick_stairs"
+		"assembly:mossy_dirt_brick_stairs",
+		"assembly:polished_dripstone_stairs",
+		"assembly:dripstone_stairs",
+		"assembly:dripstone_brick_stairs",
+		"assembly:basalt_tile_stairs",
+		"assembly:basalt_shingle_stairs",
+		"assembly:cracked_basalt_tile_stairs",
+		"assembly:tuff_brick_stairs",
+		"assembly:cracked_tuff_brick_stairs",
+		"assembly:calcite_brick_stairs",
+		"assembly:cracked_calcite_brick_stairs",
+		"assembly:amethyst_brick_stairs"
 	]
 }

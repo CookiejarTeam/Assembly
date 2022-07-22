@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "assembly:block/chiseled_tuff_bricks"
+  "variants": {
+    "": {
+      "model": "assembly:block/chiseled_tuff_bricks"
+    }
   }
 }
