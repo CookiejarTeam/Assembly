@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "side": "assembly:block/basalt_shingles",
-    "bottom": "assembly:block/basalt_shingles",
-    "top": "assembly:block/basalt_shingles"
-  }
-}
