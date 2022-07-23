@@ -4,6 +4,7 @@ import com.cookiejar.assembly.common.block.AssemblyStairBlock;
 import com.cookiejar.assembly.common.item.TabInsertBlockItem;
 import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -32,12 +33,12 @@ public class AssemblyBlocks {
     public static final Supplier<Block> DRIPSTONE_BRICK_WALL = BLOCKS.registerWithItem("dripstone_brick_wall", () -> new WallBlock(Properties.DRIPSTONE), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
 
     // Amethyst
-    public static final Supplier<Block> DRIPPING_AMETHYST = BLOCKS.registerWithItem("dripping_amethyst", () -> new AmethystBlock(Properties.AMETHYST), followItem(Items.BUDDING_AMETHYST, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-    public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerWithItem("chiseled_amethyst", () -> new AmethystBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> DRIPPING_AMETHYST = BLOCKS.registerWithItem("dripping_amethyst", () -> new AmethystBlock(Properties.DRIPPING_AMETHYST), followItem(Items.BUDDING_AMETHYST, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final Supplier<Block> CHISELED_AMETHYST = BLOCKS.registerWithItem("chiseled_amethyst", () -> new AmethystBlock(Properties.DRIPPING_AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> AMETHYST_PILLAR = BLOCKS.registerWithItem("amethyst_pillar", () -> new RotatedPillarBlock(Properties.AMETHYST), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> AMETHYST_BRICKS = BLOCKS.registerWithItem("amethyst_bricks", () -> new AmethystBlock(Properties.AMETHYST), amethyst());
     public static final Supplier<Block> AMETHYST_BRICK_SLAB = BLOCKS.registerWithItem("amethyst_brick_slab", () -> new SlabBlock(Properties.AMETHYST), amethyst());
-    public static final Supplier<Block> AMETHYST_BRICK_STAIRS = BLOCKS.registerWithItem("amethyst_brick_stairs", () -> new AssemblyStairBlock(Blocks.AMETHYST_BLOCK.defaultBlockState(), Block.Properties.copy(AMETHYST_BRICKS.get())), amethyst());
+    public static final Supplier<Block> AMETHYST_BRICK_STAIRS = BLOCKS.registerWithItem("amethyst_brick_stairs", () -> new AssemblyStairBlock(Blocks.AMETHYST_BLOCK.defaultBlockState(), Properties.AMETHYST), amethyst());
     public static final Supplier<Block> AMETHYST_BRICK_WALL = BLOCKS.registerWithItem("amethyst_brick_wall", () -> new WallBlock(Properties.AMETHYST), amethyst());
 
     // Obsidian
@@ -77,10 +78,10 @@ public class AssemblyBlocks {
     public static final Supplier<Block> BASALT_SHINGLE_STAIRS = BLOCKS.registerWithItem("basalt_shingle_stairs", () -> new AssemblyStairBlock(BASALT_SHINGLES.get().defaultBlockState(), Block.Properties.copy(Blocks.POLISHED_BASALT)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
     // Wax
-    public static final Supplier<Block> WAX_BLOCK = BLOCKS.registerWithItem("wax_block", () -> new Block(Block.Properties.copy(Blocks.STONE)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> WAX_BRICKS = BLOCKS.registerWithItem("wax_bricks", () -> new Block(Block.Properties.copy(Blocks.STONE)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> POLISHED_WAX = BLOCKS.registerWithItem("polished_wax", () -> new Block(Block.Properties.copy(Blocks.STONE)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> CARVED_WAX = BLOCKS.registerWithItem("carved_wax", () -> new Block(Block.Properties.copy(Blocks.STONE)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> WAX_BLOCK = BLOCKS.registerWithItem("wax_block", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> WAX_BRICKS = BLOCKS.registerWithItem("wax_bricks", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> POLISHED_WAX = BLOCKS.registerWithItem("polished_wax", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> CARVED_WAX = BLOCKS.registerWithItem("carved_wax", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
     // Tuff
     public static final Supplier<Block> TUFF_BRICKS = BLOCKS.registerWithItem("tuff_bricks", () -> new Block(Block.Properties.copy(Blocks.TUFF)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
@@ -121,8 +122,12 @@ public class AssemblyBlocks {
     }
 
     public static final class Properties {
+        public static final SoundType DRIPPING_AMETHYST_SOUND = new SoundType(1.0F, 1.0F, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundEvents.AMETHYST_CLUSTER_STEP, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundEvents.AMETHYST_CLUSTER_HIT, SoundEvents.AMETHYST_CLUSTER_FALL);
+
+        public static final BlockBehaviour.Properties WAX = BlockBehaviour.Properties.copy(Blocks.HONEYCOMB_BLOCK);
         public static final BlockBehaviour.Properties DIRT = BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.NYLIUM);
         public static final BlockBehaviour.Properties DRIPSTONE = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
+        public static final BlockBehaviour.Properties DRIPPING_AMETHYST = BlockBehaviour.Properties.of(Material.AMETHYST, MaterialColor.COLOR_PURPLE).strength(1.5F).sound(DRIPPING_AMETHYST_SOUND).requiresCorrectToolForDrops();
     }
 }
