@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "assembly:crying_obsidian_tiles"
+          "name": "assembly:dripstone_brick_wall"
         }
       ],
       "conditions": [
