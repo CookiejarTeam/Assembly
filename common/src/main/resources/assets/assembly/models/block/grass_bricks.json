@@ -1,6 +1,6 @@
 {   "parent": "block/block",
   "textures": {
-    "all": "assembly:block/mossy_dirt_bricks",
+    "all": "assembly:block/grass_bricks",
     "overlay": "assembly:block/grass_bricks_overlay",
     "particle": "#all"
   },

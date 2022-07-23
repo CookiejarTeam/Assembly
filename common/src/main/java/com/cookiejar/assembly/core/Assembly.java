@@ -20,20 +20,29 @@ public class Assembly {
 
     public static void onClientInit() {
         ColorRegistry.register((state, level, pos, tintIndex) -> level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.get(0.5D, 1.0D),
-                AssemblyBlocks.GRASS_BRICKS);
+                AssemblyBlocks.GRASS_BRICKS,
+                AssemblyBlocks.GRASS_BRICK_SLAB,
+                AssemblyBlocks.GRASS_BRICK_STAIRS,
+                AssemblyBlocks.GRASS_BRICK_WALL);
         ColorRegistry.register((stack, tintIndex) -> GrassColor.get(0.5D, 1.0D),
-                AssemblyBlocks.GRASS_BRICKS);
+                AssemblyBlocks.GRASS_BRICKS,
+                AssemblyBlocks.GRASS_BRICK_SLAB,
+                AssemblyBlocks.GRASS_BRICK_STAIRS,
+                AssemblyBlocks.GRASS_BRICK_WALL);
     }
 
     public static void onClientPostInit(Platform.ModSetupContext ctx) {
         ctx.enqueueWork(() -> {
                 RenderTypeRegistry.register(AssemblyBlocks.GRASS_BRICKS.get(), RenderType.cutoutMipped());
+                RenderTypeRegistry.register(AssemblyBlocks.GRASS_BRICK_SLAB.get(), RenderType.cutoutMipped());
+                RenderTypeRegistry.register(AssemblyBlocks.GRASS_BRICK_STAIRS.get(), RenderType.cutoutMipped());
+                RenderTypeRegistry.register(AssemblyBlocks.GRASS_BRICK_WALL.get(), RenderType.cutoutMipped());
         });
     }
 
     public static void onCommonInit() {
-        AssemblyBlocks.BLOCKS.register(Assembly.PLATFORM);
-        AssemblyItems.ITEMS.register(Assembly.PLATFORM);
+        AssemblyBlocks.BLOCKS.register(PLATFORM);
+        AssemblyItems.ITEMS.register(PLATFORM);
     }
 
     public static void onCommonPostInit(Platform.ModSetupContext ctx) {

@@ -9,6 +9,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -53,12 +55,12 @@ public class AssemblyBlocks {
     public static final Supplier<Block> DIRT_BRICK_SLAB = BLOCKS.registerWithItem("dirt_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DIRT_BRICK_STAIRS = BLOCKS.registerWithItem("dirt_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DIRT_BRICK_WALL = BLOCKS.registerWithItem("dirt_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
-
-    public static final Supplier<Block> GRASS_BRICKS = BLOCKS.registerWithItem("mossy_dirt_bricks", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> GRASS_BRICK_SLAB = BLOCKS.registerWithItem("mossy_dirt_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> GRASS_BRICK_STAIRS = BLOCKS.registerWithItem("mossy_dirt_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> GRASS_BRICK_WALL = BLOCKS.registerWithItem("mossy_dirt_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
     public static final Supplier<Block> DIRT_TILES = BLOCKS.registerWithItem("dirt_tiles", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+
+    public static final Supplier<Block> GRASS_BRICKS = BLOCKS.registerWithItem("grass_bricks", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_SLAB = BLOCKS.registerWithItem("grass_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_STAIRS = BLOCKS.registerWithItem("grass_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_WALL = BLOCKS.registerWithItem("grass_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
 
     // Basalt
     public static final Supplier<Block> CHISELED_BASALT = BLOCKS.registerWithItem("chiseled_basalt", () -> new Block(Block.Properties.copy(Blocks.POLISHED_BASALT)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
@@ -119,7 +121,7 @@ public class AssemblyBlocks {
     }
 
     public static final class Properties {
-        public static final BlockBehaviour.Properties DIRT = BlockBehaviour.Properties.copy(Blocks.DIRT);
+        public static final BlockBehaviour.Properties DIRT = BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.NYLIUM);
         public static final BlockBehaviour.Properties DRIPSTONE = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
     }
