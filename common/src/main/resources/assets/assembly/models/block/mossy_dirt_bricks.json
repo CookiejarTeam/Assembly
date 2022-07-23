@@ -1,6 +1,31 @@
-{
-  "parent": "minecraft:block/cube_all",
+{   "parent": "block/block",
   "textures": {
-    "all": "assembly:block/mossy_dirt_bricks"
-  }
+    "all": "assembly:block/mossy_dirt_bricks",
+    "overlay": "assembly:block/grass_bricks_overlay",
+    "particle": "#all"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "cullface": "down" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all",    "cullface": "up"},
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#all",   "cullface": "north" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#all",   "cullface": "south" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all",   "cullface": "west" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all",   "cullface": "east" }
+      }
+    },
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0, "cullface": "down"},
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0,   "cullface": "up"},
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay",  "tintindex": 0, "cullface": "north"},
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay",  "tintindex": 0, "cullface": "south"},
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0,  "cullface": "west"},
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay","tintindex": 0,   "cullface": "east"}
+      }
+    }
+  ]
 }

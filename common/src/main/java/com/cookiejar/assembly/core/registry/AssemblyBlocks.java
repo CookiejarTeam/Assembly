@@ -53,10 +53,11 @@ public class AssemblyBlocks {
     public static final Supplier<Block> DIRT_BRICK_SLAB = BLOCKS.registerWithItem("dirt_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DIRT_BRICK_STAIRS = BLOCKS.registerWithItem("dirt_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> DIRT_BRICK_WALL = BLOCKS.registerWithItem("dirt_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
-    public static final Supplier<Block> MOSSY_DIRT_BRICKS = BLOCKS.registerWithItem("mossy_dirt_bricks", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> MOSSY_DIRT_BRICK_SLAB = BLOCKS.registerWithItem("mossy_dirt_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> MOSSY_DIRT_BRICK_STAIRS = BLOCKS.registerWithItem("mossy_dirt_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> MOSSY_DIRT_BRICK_WALL = BLOCKS.registerWithItem("mossy_dirt_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
+
+    public static final Supplier<Block> GRASS_BRICKS = BLOCKS.registerWithItem("mossy_dirt_bricks", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_SLAB = BLOCKS.registerWithItem("mossy_dirt_brick_slab", () -> new SlabBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_STAIRS = BLOCKS.registerWithItem("mossy_dirt_brick_stairs", () -> new AssemblyStairBlock(DIRT_BRICKS.get().defaultBlockState(), Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> GRASS_BRICK_WALL = BLOCKS.registerWithItem("mossy_dirt_brick_wall", () -> new WallBlock(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
     public static final Supplier<Block> DIRT_TILES = BLOCKS.registerWithItem("dirt_tiles", () -> new Block(Properties.DIRT), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
     // Basalt
