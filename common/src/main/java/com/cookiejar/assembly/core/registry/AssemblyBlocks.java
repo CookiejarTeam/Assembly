@@ -1,6 +1,7 @@
 package com.cookiejar.assembly.core.registry;
 
 import com.cookiejar.assembly.common.block.AssemblyStairBlock;
+import com.cookiejar.assembly.common.block.CarvedWaxBlock;
 import com.cookiejar.assembly.common.item.TabInsertBlockItem;
 import gg.moonflower.pollen.api.registry.PollinatedBlockRegistry;
 import gg.moonflower.pollen.api.registry.PollinatedRegistry;
@@ -81,7 +82,8 @@ public class AssemblyBlocks {
     public static final Supplier<Block> WAX_BLOCK = BLOCKS.registerWithItem("wax_block", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> WAX_BRICKS = BLOCKS.registerWithItem("wax_bricks", () -> new Block(Properties.WAX), bricks());
     public static final Supplier<Block> POLISHED_WAX = BLOCKS.registerWithItem("polished_wax", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> CARVED_WAX = BLOCKS.registerWithItem("carved_wax", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> CARVED_WAX = BLOCKS.registerWithItem("carved_wax", () -> new CarvedWaxBlock(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> LIT_CARVED_WAX = BLOCKS.registerWithItem("lit_carved_wax", () -> new Block(Properties.LIT_WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
     // Tuff
     public static final Supplier<Block> TUFF_BRICKS = BLOCKS.registerWithItem("tuff_bricks", () -> new Block(Block.Properties.copy(Blocks.TUFF)), bricks());
@@ -137,6 +139,8 @@ public class AssemblyBlocks {
         public static final SoundType DRIPPING_AMETHYST_SOUND = new SoundType(1.0F, 1.0F, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundEvents.AMETHYST_CLUSTER_STEP, SoundEvents.AMETHYST_CLUSTER_BREAK, SoundEvents.AMETHYST_CLUSTER_HIT, SoundEvents.AMETHYST_CLUSTER_FALL);
 
         public static final BlockBehaviour.Properties WAX = BlockBehaviour.Properties.copy(Blocks.HONEYCOMB_BLOCK);
+        public static final BlockBehaviour.Properties LIT_WAX = BlockBehaviour.Properties.copy(Blocks.HONEYCOMB_BLOCK).lightLevel(state -> 10);
+
         public static final BlockBehaviour.Properties DIRT = BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.NYLIUM);
         public static final BlockBehaviour.Properties DRIPSTONE = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
