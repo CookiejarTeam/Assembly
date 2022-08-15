@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:tuff_bricks"
+    }
+  },
+  "result": {
+    "item": "assembly:tuff_brick_stairs",
+    "count": 4
+  }
+}

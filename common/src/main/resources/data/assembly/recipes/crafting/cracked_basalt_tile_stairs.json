@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "assembly:mossy_dirt_bricks"
+      "item": "assembly:cracked_basalt_tiles"
     }
   },
   "result": {
-    "item": "assembly:mossy_dirt_brick_stairs",
+    "item": "assembly:cracked_basalt_tile_stairs",
     "count": 4
   }
 }

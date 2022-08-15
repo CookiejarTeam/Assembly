@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:grass_bricks"
+    }
+  },
+  "result": {
+    "item": "assembly:grass_brick_slab",
+    "count": 6
+  }
+}

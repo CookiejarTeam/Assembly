@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "assembly:dripstone_bricks"
+  },
+  "result": "assembly:dripstone_brick_wall",
+  "count": 1
+}

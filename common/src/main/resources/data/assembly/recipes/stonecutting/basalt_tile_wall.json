@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "assembly:basalt_tiles"
+  },
+  "result": "assembly:basalt_tile_wall",
+  "count": 1
+}

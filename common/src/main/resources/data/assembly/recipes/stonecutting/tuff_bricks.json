@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+	{
+	  "item": "minecraft:tuff"
+	}
+  ],
+  "result": "assembly:tuff_bricks",
+  "count": 1
+}

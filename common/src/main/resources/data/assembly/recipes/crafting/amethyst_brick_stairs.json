@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:amethyst_bricks"
+    }
+  },
+  "result": {
+    "item": "assembly:amethyst_brick_stairs",
+    "count": 4
+  }
+}

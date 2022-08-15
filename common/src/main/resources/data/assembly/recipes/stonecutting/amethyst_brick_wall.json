@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "assembly:amethyst_bricks"
+  },
+  "result": "assembly:amethyst_brick_wall",
+  "count": 1
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:wax_bricks"
+    }
+  },
+  "result": {
+    "item": "assembly:carved_wax",
+    "count": 4
+  }
+}

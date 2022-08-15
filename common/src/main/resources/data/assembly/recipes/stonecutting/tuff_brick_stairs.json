@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "assembly:tuff_bricks"
+    }
+  ],
+  "result": "assembly:tuff_brick_stairs",
+  "count": 1
+}

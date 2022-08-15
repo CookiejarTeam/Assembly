@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:basalt_tiles"
+    }
+  },
+  "result": {
+    "item": "assembly:basalt_shingles",
+    "count": 4
+  }
+}

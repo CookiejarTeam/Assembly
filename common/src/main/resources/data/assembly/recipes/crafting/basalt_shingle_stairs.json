@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:basalt_shingles"
+    }
+  },
+  "result": {
+    "item": "assembly:basalt_shingle_stairs",
+    "count": 4
+  }
+}

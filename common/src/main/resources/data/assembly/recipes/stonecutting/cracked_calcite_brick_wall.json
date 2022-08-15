@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "assembly:cracked_calcite_bricks"
+  },
+  "result": "assembly:cracked_calcite_brick_wall",
+  "count": 1
+}

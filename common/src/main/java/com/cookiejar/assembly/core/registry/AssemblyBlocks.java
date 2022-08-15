@@ -83,7 +83,7 @@ public class AssemblyBlocks {
     public static final Supplier<Block> WAX_BRICKS = BLOCKS.registerWithItem("wax_bricks", () -> new Block(Properties.WAX), bricks());
     public static final Supplier<Block> POLISHED_WAX = BLOCKS.registerWithItem("polished_wax", () -> new Block(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> CARVED_WAX = BLOCKS.registerWithItem("carved_wax", () -> new CarvedWaxBlock(Properties.WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
-    public static final Supplier<Block> LIT_CARVED_WAX = BLOCKS.registerWithItem("lit_carved_wax", () -> new Block(Properties.LIT_WAX), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+    public static final Supplier<Block> LIT_CARVED_WAX = BLOCKS.register("lit_carved_wax", () -> new Block(Properties.LIT_WAX));
 
     // Tuff
     public static final Supplier<Block> TUFF_BRICKS = BLOCKS.registerWithItem("tuff_bricks", () -> new Block(Block.Properties.copy(Blocks.TUFF)), bricks());

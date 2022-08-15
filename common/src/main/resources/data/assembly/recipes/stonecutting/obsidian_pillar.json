@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+	{
+	  "item": "assembly:chiseled_obsidian"
+	}
+  ],
+  "result": "assembly:obsidian_pillar",
+  "count": 1
+}

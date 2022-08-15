@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "assembly:basalt_tiles"
+  },
+  "result": "assembly:cracked_basalt_tiles"
+}
