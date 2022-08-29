@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
 	{
-	  "item": "minecraft:tuff"
+	  "item": "assembly:polished_tuff"
 	}
   ],
   "result": "assembly:tuff_bricks",

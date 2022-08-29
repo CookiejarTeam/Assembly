@@ -49,6 +49,8 @@
     "assembly:cracked_calcite_bricks",
     "assembly:chiseled_calcite_bricks",
     "assembly:polished_dripstone",
-    "assembly:chiseled_tuff_bricks"
+    "assembly:chiseled_tuff_bricks",
+    "assembly:polished_tuff",
+    "assembly:polished_calcite"
   ]
 }

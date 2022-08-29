@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:tuff"
+    }
+  ],
+  "result": "assembly:polished_tuff",
+  "count": 1
+}

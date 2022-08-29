@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ],
+  "result": "assembly:polished_calcite",
+  "count": 1
+}

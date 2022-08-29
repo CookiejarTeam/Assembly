@@ -86,6 +86,8 @@ public class AssemblyBlocks {
     public static final Supplier<Block> LIT_CARVED_WAX = BLOCKS.register("lit_carved_wax", () -> new Block(Properties.LIT_WAX));
 
     // Tuff
+
+    public static final Supplier<Block> POLISHED_TUFF = BLOCKS.registerWithItem("polished_tuff", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> TUFF_BRICKS = BLOCKS.registerWithItem("tuff_bricks", () -> new Block(Block.Properties.copy(Blocks.TUFF)), bricks());
     public static final Supplier<Block> TUFF_BRICK_SLAB = BLOCKS.registerWithItem("tuff_brick_slab", () -> new SlabBlock(Block.Properties.copy(Blocks.TUFF)), brickSlab());
     public static final Supplier<Block> TUFF_BRICK_STAIRS = BLOCKS.registerWithItem("tuff_brick_stairs", () -> new AssemblyStairBlock(TUFF_BRICKS.get().defaultBlockState(), Block.Properties.copy(Blocks.TUFF)), brickStairs());
@@ -97,6 +99,8 @@ public class AssemblyBlocks {
     public static final Supplier<Block> CHISELED_TUFF_BRICKS = BLOCKS.registerWithItem("chiseled_tuff_bricks", () -> new Block(Block.Properties.copy(Blocks.TUFF)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
 
     // Calcite
+
+    public static final Supplier<Block> POLISHED_CALCITE = BLOCKS.registerWithItem("polished_calcite", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE)), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
     public static final Supplier<Block> CALCITE_BRICKS = BLOCKS.registerWithItem("calcite_bricks", () -> new Block(Block.Properties.copy(Blocks.CALCITE)), bricks());
     public static final Supplier<Block> CALCITE_BRICK_SLAB = BLOCKS.registerWithItem("calcite_brick_slab", () -> new SlabBlock(Block.Properties.copy(Blocks.CALCITE)), brickSlab());
     public static final Supplier<Block> CALCITE_BRICK_STAIRS = BLOCKS.registerWithItem("calcite_brick_stairs", () -> new AssemblyStairBlock(CALCITE_BRICKS.get().defaultBlockState(), Block.Properties.copy(Blocks.CALCITE)), brickStairs());

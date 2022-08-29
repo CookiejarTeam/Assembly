@@ -6,11 +6,11 @@
   ],
   "key": {
     "X": {
-      "item": "assembly:polished_calcite"
+      "item": "minecraft:calcite"
     }
   },
   "result": {
-    "item": "assembly:calcite_bricks",
+    "item": "assembly:polished_calcite",
     "count": 4
   }
 }
