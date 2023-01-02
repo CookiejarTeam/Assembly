@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
     {
-      "item": "assembly:mossy_dirt_bricks"
+      "item": "assembly:grass_bricks"
     }
   ],
   "result": "assembly:grass_brick_slab",

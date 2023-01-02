@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "assembly:grass_bricks"
+  },
+  "result": "assembly:grass_brick_wall",
+  "count": 1
+}

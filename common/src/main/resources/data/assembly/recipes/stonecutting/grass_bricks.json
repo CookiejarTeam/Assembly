@@ -2,9 +2,9 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
     {
-      "item": "minecraft:dripstone_block"
+      "item": "minecraft:grass"
     }
   ],
-  "result": "assembly:polished_dripstone",
+  "result": "assembly:grass_bricks",
   "count": 1
 }

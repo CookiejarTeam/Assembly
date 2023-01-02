@@ -6,11 +6,11 @@
   ],
   "key": {
     "X": {
-      "item": "minecraft:dripstone_block"
+      "item": "assembly:obsidian_tiles"
     }
   },
   "result": {
-    "item": "assembly:polished_dripstone",
-    "count": 4
+    "item": "assembly:polished_obsidian",
+    "count": 1
   }
 }

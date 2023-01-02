@@ -2,9 +2,9 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
     {
-      "item": "minecraft:dripstone_block"
+      "item": "minecraft:obsidian"
     }
   ],
-  "result": "assembly:polished_dripstone",
+  "result": "assembly:polished_obsidian",
   "count": 1
 }

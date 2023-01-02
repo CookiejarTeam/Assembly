@@ -2,9 +2,9 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
     {
-      "item": "assembly:cracked_tuff_bricks"
+      "item": "assembly:cracked_calcite_bricks"
     }
   ],
-  "result": "assembly:cracked_tuff_brick_slab",
+  "result": "assembly:cracked_calcite_brick_brick_slab",
   "count": 2
 }
