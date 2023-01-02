@@ -29,8 +29,8 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${id}]]
-modId = "pollen"
+modId = "architectury"
 mandatory = true
-versionRange = "[1.4.9,)"
-ordering = "BEFORE"
+versionRange = "[4.10.88,)"
+ordering = "AFTER"
 side = "BOTH"

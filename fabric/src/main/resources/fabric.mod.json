@@ -5,7 +5,7 @@
   "name": "${name}",
   "description": "Adds more unique building blocks to Minecraft.",
   "authors": [ "CookieJar Modding" ],
-  "contributors": [ "JustinPlayzz", "ebo2022" ],
+  "contributors": [ "JustinPlayzz", "StevenPlayzz", "ebo2022" ],
   "contact": {
     "homepage": "",
 	"issues": "https://github.com/CookieJarModding/Assembly/issues",
@@ -24,6 +24,6 @@
   "depends": {
     "fabric": "*",
     "minecraft": "1.18.2",
-    "pollen": ">=1.4.9 <2.0.0"
+    "architectury": ">=4.10.88"
   }
 }
