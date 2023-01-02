@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[40,)"
+loaderVersion = "[43,)"
 issueTrackerURL = "https://github.com/CookieJarModding/Assembly/issues"
 license = "GPLv3"
 
@@ -18,7 +18,7 @@ description = "Adds more unique building blocks to Minecraft."
 [[dependencies.${id}]]
 modId = "forge"
 mandatory = true
-versionRange = "[39,)"
+versionRange = "[43,)"
 ordering = "NONE"
 side = "BOTH"
 

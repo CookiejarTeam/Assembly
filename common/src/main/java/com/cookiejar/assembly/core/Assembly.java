@@ -25,11 +25,10 @@ public class Assembly {
                 AssemblyBlocks.GRASS_BRICK_STAIRS,
                 AssemblyBlocks.GRASS_BRICK_WALL);
 
-        RenderTypeRegistry.register(RenderType.cutoutMipped(),
-                AssemblyBlocks.GRASS_BRICKS.get(),
-                AssemblyBlocks.GRASS_BRICK_SLAB.get(),
-                AssemblyBlocks.GRASS_BRICK_STAIRS.get(),
-                AssemblyBlocks.GRASS_BRICK_WALL.get());
+        AssemblyBlocks.GRASS_BRICKS.listen((block -> RenderTypeRegistry.register(RenderType.cutoutMipped(), block)));
+        AssemblyBlocks.GRASS_BRICK_SLAB.listen((block -> RenderTypeRegistry.register(RenderType.cutoutMipped(), block)));
+        AssemblyBlocks.GRASS_BRICK_STAIRS.listen((block -> RenderTypeRegistry.register(RenderType.cutoutMipped(), block)));
+        AssemblyBlocks.GRASS_BRICK_WALL.listen((block -> RenderTypeRegistry.register(RenderType.cutoutMipped(), block)));
     }
 
     public static void init() {
