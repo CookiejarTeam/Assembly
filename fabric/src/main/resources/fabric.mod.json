@@ -12,6 +12,7 @@
     "sources": "https://github.com/CookieJarModding/Assembly"
   },
   "license": "GPLv3",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -23,7 +24,7 @@
   },
   "depends": {
     "fabric": "*",
-    "minecraft": "1.18.2",
-    "architectury": ">=4.10.88"
+    "minecraft": "1.19.2",
+    "architectury": ">=6.2.43"
   }
 }

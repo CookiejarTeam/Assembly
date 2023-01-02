@@ -5,6 +5,7 @@ license = "GPLv3"
 
 [[mods]]
 modId = "${id}"
+logoFile = "icon.png"
 version = "${version}"
 displayName = "${name}"
 authors = "CookieJar Modding"
@@ -24,13 +25,13 @@ side = "BOTH"
 [[dependencies.${id}]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.2,)"
+versionRange = "[1.19.2,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${id}]]
 modId = "architectury"
 mandatory = true
-versionRange = "[4.10.88,)"
+versionRange = "[6.2.43,)"
 ordering = "AFTER"
 side = "BOTH"
