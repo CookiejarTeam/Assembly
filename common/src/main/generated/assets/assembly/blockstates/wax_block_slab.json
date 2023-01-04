@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assembly:block/wax_block_slab"
+    },
+    "type=double": {
+      "model": "assembly:block/wax_block"
+    },
+    "type=top": {
+      "model": "assembly:block/wax_block_slab_top"
+    }
+  }
+}

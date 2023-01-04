@@ -15,6 +15,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 @SuppressWarnings("deprecation")
 public class CarvedWaxBlock extends Block {
 
@@ -22,6 +25,8 @@ public class CarvedWaxBlock extends Block {
         super(properties);
     }
 
+    @ParametersAreNonnullByDefault
+    @Nonnull
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
@@ -33,13 +38,13 @@ public class CarvedWaxBlock extends Block {
                 double d8 = (double) blockPos.getY() + level.random.nextDouble() + (level.random.nextDouble()/6);
                 double d13 = (double) blockPos.getZ() + level.random.nextDouble() + (level.random.nextDouble()/6);
                 level.addParticle(ParticleTypes.FLAME, d3, d8, d13, 0.0, 0.0, 0.0);
-                itemStack.hurtAndBreak(1, player, (playerx) -> {
-                    playerx.broadcastBreakEvent(interactionHand);
-                });
+                itemStack.hurtAndBreak(1, player, (playerx) -> playerx.broadcastBreakEvent(interactionHand));
             }
             return InteractionResult.sidedSuccess(level.isClientSide);
         } else {
             return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
         }
     }
+
+
 }

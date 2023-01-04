@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "assembly:block/lit_carved_wax"
+    "all": "assembly:block/lit_carved_wax",
+    "particle": "assembly:block/carved_wax"
   }
 }

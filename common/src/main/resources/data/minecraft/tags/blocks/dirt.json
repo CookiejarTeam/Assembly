@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "assembly:polished_dirt",
+    "assembly:chiseled_dirt",
+    "assembly:dirt_bricks",
+    "assembly:dirt_tiles",
+    "assembly:grass_bricks"
+  ]
+}

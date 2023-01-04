@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "assembly:block/polished_calcite_slab_top"
+    },
+    "type=bottom": {
+      "model": "assembly:block/polished_calcite_slab"
+    },
+    "type=double": {
+      "model": "assembly:block/polished_calcite"
+    }
+  }
+}
